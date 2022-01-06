@@ -7,8 +7,6 @@ router.post("/api/transaction", ({body}, res) => {
       res.json(dbTransaction);
     })
     .catch(err => {
-      console.log('!%$#&^%$(&^%)*&^)*&%^&$^%#$%^$(&^%')
-      console.log('errorrrrr', err)
       res.status(404).json(err);
     });
 });
@@ -29,6 +27,8 @@ router.get("/api/transaction", (req, res) => {
       res.json(dbTransaction);
     })
     .catch(err => {
+      console.log('!%$#&^%$(&^%)*&^)*&%^&$^%#$%^$(&^%')
+      console.log('errorrrrr', err)
       res.status(404).json(err);
     });
 });
