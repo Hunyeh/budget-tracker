@@ -5,7 +5,6 @@ const compression = require("compression");
 
 const PORT = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
-console.log('mongooooo db error', MONGODB_URI)
 
 const app = express();
 
@@ -21,9 +20,7 @@ mongoose.connect(MONGODB_URI,  {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true
-})
-.then(()=> console.log('no workin :('))
-.catch(err => console.log('abcdefghijklmnop',err))
+});
 
 // routes
 app.use(require("./routes/api.js"));
