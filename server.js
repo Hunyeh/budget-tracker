@@ -21,7 +21,9 @@ mongoose.connect(MONGODB_URI,  {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true
-});
+})
+.then(()=> console.log('no workin :('))
+.catch(err => console.log('abcdefghijklmnop',err))
 
 // routes
 app.use(require("./routes/api.js"));
